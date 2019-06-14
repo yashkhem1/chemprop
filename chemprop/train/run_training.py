@@ -144,7 +144,7 @@ def run_training(args: Namespace, logger: Logger = None) -> List[float]:
         # Tensorboard writer
         save_dir = os.path.join(args.save_dir, f'model_{model_idx}')
         makedirs(save_dir)
-        writer = SummaryWriter(log_dir=save_dir)
+        writer = SummaryWriter(logdir=save_dir)
 
         # Load/build model
         if args.checkpoint_paths is not None:
